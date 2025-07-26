@@ -6,18 +6,17 @@ import ContactSection from "@/components/ContactUs";
 import FeaturesSection from "@/components/Features";
 import FooterSection from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import NavbarSection from "@/components/Navbar";
+import './globals.css';
+
 export default function Home() {
   return (
     <>
-      <NavbarSection />
       <HeroSection />
       <AboutSection />
       <FeaturesSection />
       <CommunitySection />
       <BecomeAGhostCoder />
       <ContactSection />
-      <FooterSection />
     </>
   );
 }

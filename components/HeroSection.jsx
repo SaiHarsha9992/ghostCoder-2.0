@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { FaArrowsAlt, FaCircle } from 'react-icons/fa';
+import Loader from './Loader';
 const AvatarCanvas = dynamic(() => import('./AvatarCanvas'), { ssr: false });
 export default function HeroSection() {
   return (

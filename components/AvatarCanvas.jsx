@@ -8,8 +8,8 @@ function Loader() {
 
   return (
     <Html center>
-      <div className="flex flex-col items-center justify-center gap-2 text-white">
-        <div className="h-10 w-10 animate-[spinner-grow_0.75s_linear_infinite] rounded-full bg-white opacity-80" />
+      <div className="flex flex-col items-center justify-center gap-2 text-white relative">
+        <span className="loader" />
         <span className="text-sm font-medium">{progress.toFixed(0)}% Loaded</span>
       </div>
     </Html>

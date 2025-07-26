@@ -1,18 +1,17 @@
 import "./globals.css";
-
-import { Orbitron, Space_Grotesk } from 'next/font/google'
-
+import { Orbitron, Space_Grotesk } from 'next/font/google';
+import ClientLayout from "./Layouts/client-layout";
 const orbitron = Orbitron({
   subsets: ['latin'],
   variable: '--font-orbitron',
   weight: ['500', '700'],
-})
+});
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space',
   weight: ['400', '500', '600'],
-})
+});
 
 export const metadata = {
   title: {
@@ -44,14 +43,11 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${orbitron.variable} ${spaceGrotesk.variable} antialiased bg-[#0B0F11] text-white font-body`}
-      >
-        {children}
+      <body className={`${orbitron.variable} ${spaceGrotesk.variable} antialiased bg-[#0B0F11] text-white font-body`}>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
